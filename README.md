@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+## Your Life in Weeks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Project Goal:** Develop an interactive web application visualizing a person's life in weeks, combined with a mastery hours calculator.
 
-Currently, two official plugins are available:
+**Timeline:** 7 days
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Tech Stack:**
 
-## Expanding the ESLint configuration
+*   **Frontend:** React (TypeScript), RxJS, Vite, SCSS, Framer Motion (for animations), Temporal JS (for date/time manipulation)
+*   **DevOps:** Docker
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Milestones:**
 
-- Configure the top-level `parserOptions` property like this:
+**Milestone 1: Project Setup and Core Components (Day 1-2)**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+*   **Tasks:**
+    *   Set up the development environment: Initialize a new project using Vite with React and TypeScript.
+    *   Install necessary dependencies: `react`, `typescript`, `rxjs`, `vite`, `sass`, `framer-motion`, `temporal-js`, other necessary packages.
+    *   Create core components:
+        *   `LifeCalendar`: Component to render the grid of weeks.
+        *   `MasteryCalculator`: Component for the mastery hours calculation.
+        *   `App` component to manage routing and state.
+    *   Implement basic styling: Set up SCSS and create basic styles for the components.
+*   **Deliverables:**
+    *   Functional project setup with core components rendered.
+    *   Basic styling implemented.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+**Milestone 2: Life Calendar Implementation (Day 3-4)**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+*   **Tasks:**
+    *   Implement user input for date of birth and optional end date.
+    *   Use Temporal JS to calculate the total number of weeks and render the `LifeCalendar` grid.
+    *   Implement color-coding for weeks (e.g., by decade or user-defined categories).
+    *   Implement basic hover effects to display week details.
+    *   Integrate RxJS for any dynamic updates (e.g., highlighting the current week).
+*   **Deliverables:**
+    *   Fully functional `LifeCalendar` component with user input, dynamic rendering, and basic interactivity.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+**Milestone 3: Mastery Calculator Implementation (Day 5-6)**
+
+*   **Tasks:**
+    *   Implement user input for current skill level, target skill level, and hours/week dedicated to learning.
+    *   Use Temporal JS to calculate the remaining time to mastery.
+    *   Implement a progress bar and/or flow field animation using Framer Motion and RxJS to visualize progress.
+    *   Display the estimated completion date, dynamically updated using RxJS and Temporal JS.
+*   **Deliverables:**
+    *   Fully functional `MasteryCalculator` component with interactive inputs, progress visualization, and dynamic updates.
+
+**Milestone 4: Polish, Testing, and Deployment (Day 7)**
+
+*   **Tasks:**
+    *   Refine styling and animations for both components.
+    *   Add responsive design for different screen sizes.
+    *   Write basic unit tests for core functionalities.
+    *   Set up Docker for containerization.
+    *   Deploy the application (e.g., using Netlify, Vercel, or a similar platform).
+    *   Review and optimize the application's performance.
+*   **Deliverables:**
+    *   Polished and tested web application.
+    *   Deployed application.
+    *   Dockerized application.
