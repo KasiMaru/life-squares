@@ -9,11 +9,9 @@ services:
     develop:
       watch:
         - action: rebuild
-          path: ./package.json
-          target: /app
-        - action: rebuild
-          path: ./package-lock.json
-          target: /app
+          path: package.json
         - action: sync
           path: .
           target: /app
+          ignore:
+            - node_modules/
